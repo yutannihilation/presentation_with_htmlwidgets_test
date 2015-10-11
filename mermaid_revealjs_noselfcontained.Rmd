@@ -1,0 +1,25 @@
+---
+title: "mermaidjs test"
+author: "Hiroaki Yutani"
+date: "`r Sys.Date()`"
+output:
+  revealjs::revealjs_presentation:
+    self_contained: false
+---
+
+## test
+
+```{r echo=FALSE}
+library(DiagrammeR)
+
+DiagrammeR("
+  graph LR
+    A-->B
+    A-->C
+    C-->E
+    B-->D
+    C-->D
+    D-->F
+    E-->F
+")
+```

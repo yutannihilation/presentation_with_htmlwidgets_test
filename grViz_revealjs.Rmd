@@ -1,0 +1,15 @@
+---
+title: "grViz test"
+author: "Hiroaki Yutani"
+date: "`r Sys.Date()`"
+output:
+  revealjs::revealjs_presentation
+---
+
+## test
+
+```{r echo=FALSE}
+library(DiagrammeR)
+
+grViz("digraph {A;}")
+```
