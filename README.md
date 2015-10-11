@@ -8,7 +8,7 @@ htmlwidgets and presentations
 | slidy    | [△][sl_lf1]| [△][sl_gv1] | [△][sl_mm1]|
 | slidy(no self-contained) | [○][sl_lf2]| [○][sl_gv2] | [○][sl_mm2]|
 | revealjs    | [×][rv_lf1]| [○][rv_gv1] | [○][rv_mm1]|
-| revealjs(no self-contained) | [×][rv_lf2]| [×][rv_gv2] | [x][rv_mm2]|
+| revealjs(no self-contained) | [×][rv_lf2]| [○][rv_gv2] | [○][rv_mm2]|
 
 [io_lf1]:https://yutannihilation.github.io/presentation_with_htmlwidgets_test/leaflet_ioslides.html
 [io_gv1]:https://yutannihilation.github.io/presentation_with_htmlwidgets_test/grViz_ioslides.html
