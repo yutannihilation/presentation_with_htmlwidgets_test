@@ -10,19 +10,5 @@ output: ioslides_presentation
 ```{r echo=FALSE}
 library(DiagrammeR)
 
-grViz('
-digraph G {
-      size = "4,4";
-      main [shape = box]; /* this is a comment */
-      main -> parse [weight = 8];
-      parse -> execute;
-      main -> init [style = dotted];
-      # main -> cleanup;
-      execute -> { make_string; printf}
-      init -> make_string;
-      edge [color = red]; // so is this
-      main -> printf;
-      node [shape = box, style = filled, color = ".7 .3 1.0"];
-      execute -> compare;
-}')
+grViz("digraph {A;}")
 ```

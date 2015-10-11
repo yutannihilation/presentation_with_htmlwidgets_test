@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mermaidjs test</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="generator" content="pandoc" />
+
+
+
+  <meta name="date" content="2015-10-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" media="all" href="mermaid_isolides_noselfcontained_files/ioslides-13.5.1/fonts/fonts.css">
+
+  <link rel="stylesheet" media="all" href="mermaid_isolides_noselfcontained_files/ioslides-13.5.1/theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="mermaid_isolides_noselfcontained_files/ioslides-13.5.1/theme/css/phone.css">
+
+  <base target="_blank">
+
+  <script type="text/javascript">
+    var SLIDE_CONFIG = {
+      // Slide settings
+      settings: {
+                title: 'mermaidjs test',
+                        useBuilds: true,
+        usePrettify: true,
+        enableSlideAreas: true,
+        enableTouch: true,
+              },
+
+      // Author information
+      presenters: [
+            {
+        name:  'Hiroaki Yutani' ,
+        company: '',
+        gplus: '',
+        twitter: '',
+        www: '',
+        github: ''
+      },
+            ]
+    };
+  </script>
+
+  <style type="text/css">
+
+    b, strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    slides > slide {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .auto-fadein {
+      -webkit-transition: opacity 0.6s ease-in;
+      -webkit-transition-delay: 0.4s;
+      -moz-transition: opacity 0.6s ease-in 0.4s;
+      -o-transition: opacity 0.6s ease-in 0.4s;
+      transition: opacity 0.6s ease-in 0.4s;
+      opacity: 0;
+    }
+
+  </style>
+
+
+  <script src="mermaid_isolides_noselfcontained_files/htmlwidgets-0.5.1/htmlwidgets.js"></script>
+  <script src="mermaid_isolides_noselfcontained_files/d3-3.3.8/d3.min.js"></script>
+  <script src="mermaid_isolides_noselfcontained_files/dagre-0.4.0/dagre-d3.min.js"></script>
+  <link href="mermaid_isolides_noselfcontained_files/mermaid-0.3.0/dist/mermaid.css" rel="stylesheet" />
+  <script src="mermaid_isolides_noselfcontained_files/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
+  <link href="mermaid_isolides_noselfcontained_files/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+  <script src="mermaid_isolides_noselfcontained_files/chromatography-0.1/chromatography.js"></script>
+  <script src="mermaid_isolides_noselfcontained_files/DiagrammeR-binding-0.7/DiagrammeR.js"></script>
+
+</head>
+
+<body style="opacity: 0">
+
+<slides>
+
+  <slide class="title-slide segue nobackground">
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+            <p style="margin-top: 6px; margin-left: -2px;">2015-10-11</p>
+          </hgroup>
+  </slide>
+
+<slide class=''><hgroup><h2>test</h2></hgroup><article  id="test">
+
+<p><div id="htmlwidget-1703" style="width:720px;height:432px;" class="DiagrammeR"></div>
+<script type="application/json" data-for="htmlwidget-1703">{"x":{"diagram":"\n  graph LR\n    A-->B\n    A-->C\n    C-->E\n    B-->D\n    C-->D\n    D-->F\n    E-->F\n"},"evals":[]}</script></p></article></slide>
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script src="mermaid_isolides_noselfcontained_files/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+<script src="mermaid_isolides_noselfcontained_files/ioslides-13.5.1/js/prettify/prettify.js"></script>
+<script src="mermaid_isolides_noselfcontained_files/ioslides-13.5.1/js/prettify/lang-r.js"></script>
+<script src="mermaid_isolides_noselfcontained_files/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+<script src="mermaid_isolides_noselfcontained_files/ioslides-13.5.1/js/hammer.js"></script>
+<script src="mermaid_isolides_noselfcontained_files/ioslides-13.5.1/js/slide-controller.js"></script>
+<script src="mermaid_isolides_noselfcontained_files/ioslides-13.5.1/js/slide-deck.js"></script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- map slide visiblity events into shiny -->
+<script>
+  (function() {
+    if (window.jQuery) {
+       window.jQuery(document).on('slideleave', function(e) {
+         window.jQuery(e.target).trigger('hidden');
+      });
+       window.jQuery(document).on('slideenter', function(e) {
+         window.jQuery(e.target).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
