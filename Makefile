@@ -1,5 +1,5 @@
-HTML_FILES := $(patsubst %.Rmd, %_isolides.html ,$(wildcard *.Rmd)) \
-              $(patsubst %.Rmd, %_isolides_noselfcontained.html ,$(wildcard *.Rmd)) \
+HTML_FILES := $(patsubst %.Rmd, %_ioslides.html ,$(wildcard *.Rmd)) \
+              $(patsubst %.Rmd, %_ioslides_noselfcontained.html ,$(wildcard *.Rmd)) \
               $(patsubst %.Rmd, %_slidy.html ,$(wildcard *.Rmd)) \
               $(patsubst %.Rmd, %_slidy_noselfcontained.html ,$(wildcard *.Rmd))\
               $(patsubst %.Rmd, %_revealjs.html ,$(wildcard *.Rmd)) \
@@ -13,7 +13,7 @@ all: html
 
 html: $(HTML_FILES)
 
-%_isolides.html: %.Rmd
+%_ioslides.html: %.Rmd
 	R --slave -e "tryCatch( \
 		rmarkdown::render('$<', output_file = '$@', encoding = 'UTF-8', \
 			output_format = 'ioslides_presentation', output_options = list( \
@@ -23,7 +23,7 @@ html: $(HTML_FILES)
 		), error = function(e) cat(e\$$message, file = '$@') \
 	)"
 
-%_isolides_noselfcontained.html: %.Rmd
+%_ioslides_noselfcontained.html: %.Rmd
 	R --slave -e "tryCatch( \
 		rmarkdown::render('$<', output_file = '$@', encoding = 'UTF-8', \
 			output_format = 'ioslides_presentation', output_options = list( \
@@ -75,5 +75,5 @@ html: $(HTML_FILES)
 
 .PHONY: clean
 clean:
-	$(RM) *.html *.md
+	$(RM) *.html *_*.md
 	$(RM) -r *_cache/ *_files/
