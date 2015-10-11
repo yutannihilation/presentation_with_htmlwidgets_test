@@ -11,7 +11,7 @@ FIGURE_DIR := figures/
 
 all: html
 
-html: $(HTML_FILES)
+html: $(HTML_FILES) index
 
 %_ioslides.html: %.Rmd
 	R --slave -e "tryCatch( \
@@ -73,7 +73,11 @@ html: $(HTML_FILES)
 		), error = function(e) cat(e\$$message, file = '$@') \
 	)"
 
-.PHONY: clean
+.PHONY: index clean
+
+index:
+	R --slave -e "rmarkdown::render('README.md', output_file = 'index.html', encoding = 'UTF-8')"
+
 clean:
 	$(RM) *.html *_*.md
 	$(RM) -r *_cache/ *_files/
