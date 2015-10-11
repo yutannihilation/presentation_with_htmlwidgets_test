@@ -1,7 +1,9 @@
 HTML_FILES := $(patsubst %.Rmd, %_isolides.html ,$(wildcard *.Rmd)) \
               $(patsubst %.Rmd, %_isolides_noselfcontained.html ,$(wildcard *.Rmd)) \
               $(patsubst %.Rmd, %_slidy.html ,$(wildcard *.Rmd)) \
-              $(patsubst %.Rmd, %_slidy_noselfcontained.html ,$(wildcard *.Rmd))
+              $(patsubst %.Rmd, %_slidy_noselfcontained.html ,$(wildcard *.Rmd))\
+              $(patsubst %.Rmd, %_revealjs.html ,$(wildcard *.Rmd)) \
+              $(patsubst %.Rmd, %_revealjs_noselfcontained.html ,$(wildcard *.Rmd))
 
 CACHE_DIRS := $(patsubst %.Rmd, %_cache ,$(wildcard *.Rmd))
 
@@ -45,6 +47,26 @@ html: $(HTML_FILES)
 	R --slave -e "tryCatch( \
 		rmarkdown::render('$<', output_file = '$@', encoding = 'UTF-8', \
 			output_format = 'slidy_presentation', output_options = list( \
+				self_contained = FALSE, \
+				keep_md = TRUE \
+			) \
+		), error = function(e) cat(e\$$message, file = '$@') \
+	)"
+
+%_revealjs.html: %.Rmd
+	R --slave -e "tryCatch( \
+		rmarkdown::render('$<', output_file = '$@', encoding = 'UTF-8', \
+			output_format = 'revealjs::revealjs_presentation', output_options = list( \
+				self_contained = TRUE, \
+				keep_md = TRUE \
+			) \
+		), error = function(e) cat(e\$$message, file = '$@') \
+	)"
+
+%_revealjs_noselfcontained.html: %.Rmd
+	R --slave -e "tryCatch( \
+		rmarkdown::render('$<', output_file = '$@', encoding = 'UTF-8', \
+			output_format = 'revealjs::revealjs_presentation', output_options = list( \
 				self_contained = FALSE, \
 				keep_md = TRUE \
 			) \
