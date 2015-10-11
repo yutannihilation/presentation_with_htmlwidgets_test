@@ -3,12 +3,12 @@ htmlwidgets and presentations
 
 |             | leaflet    | grViz       | mermaidjs  |
 |------------:|-----------:|------------:|-----------:|
-| ioslides    | [×][io_lf1]| [×][io_gv1] | [x][io_mm1]|
-| ioslides(self-contailed) | [○][io_lf2]| [○][io_gv2] | [○][io_mm2]|
-| slidy    | [×][sl_lf1]| [×][sl_gv1] | [x][sl_mm1]|
-| slidy(self-contained) | [×][sl_lf2]| [×][sl_gv2] | [x][sl_mm2]|
-| revealjs    | [×][rv_lf1]| [×][rv_gv1] | [x][rv_mm1]|
-| revealjs(self-contained) | [×][rv_lf2]| [×][rv_gv2] | [x][rv_mm2]|
+| ioslides    | [×][io_lf1]| [×][io_gv1] | [×][io_mm1]|
+| ioslides(no self-contailed) | [○][io_lf2]| [×][io_gv2] | [○][io_mm2]|
+| slidy    | [△][sl_lf1]| [△][sl_gv1] | [△][sl_mm1]|
+| slidy(no self-contained) | [○][sl_lf2]| [○][sl_gv2] | [○][sl_mm2]|
+| revealjs    | [×][rv_lf1]| [○][rv_gv1] | [○][rv_mm1]|
+| revealjs(no self-contained) | [×][rv_lf2]| [×][rv_gv2] | [x][rv_mm2]|
 
 [io_lf1]:https://yutannihilation.github.io/presentation_with_htmlwidgets_test/leaflet_ioslides.html
 [io_gv1]:https://yutannihilation.github.io/presentation_with_htmlwidgets_test/grViz_ioslides.html
