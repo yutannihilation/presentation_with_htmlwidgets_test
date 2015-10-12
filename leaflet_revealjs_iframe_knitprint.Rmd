@@ -3,8 +3,7 @@ title: "leaflet test"
 author: "Hiroaki Yutani"
 date: "`r Sys.Date()`"
 output:
-  revealjs::revealjs_presentation:
-    self_contained: false
+  revealjs::revealjs_presentation
 ---
 
 ## test
