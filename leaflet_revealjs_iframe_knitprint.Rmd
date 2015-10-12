@@ -24,7 +24,7 @@ knit_print.htmlwidget <- function (widget, ..., options = NULL)
             width = WIDTH, height = HEIGHT)
     }
     else {
-        list(src = file, width = WIDTG, height = HEIGHT)
+        list(src = file, width = WIDTH, height = HEIGHT)
     }
   
   x <- htmltools::tag("iframe", content)
