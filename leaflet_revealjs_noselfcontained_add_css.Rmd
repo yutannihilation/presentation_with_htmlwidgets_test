@@ -1,0 +1,23 @@
+---
+title: "leaflet test"
+author: "Hiroaki Yutani"
+date: "`r Sys.Date()`"
+output:
+  revealjs::revealjs_presentation:
+    self_contained: false
+---
+
+## test
+
+<style type="text/css">
+.leaflet-container img {
+	max-height: none !important;
+	border: none !important;
+	}
+</style>
+
+```{r echo=FALSE}
+library(leaflet)
+
+leaflet() %>% addTiles()
+```
