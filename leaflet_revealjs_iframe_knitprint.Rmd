@@ -20,11 +20,10 @@ knit_print.htmlwidget <- function (widget, ..., options = NULL)
   htmlwidgets::saveWidget(widget, file = file, selfcontained = selfcontained)
   content <- if (selfcontained) {
         on.exit(unlink(file), add = TRUE)
-        list(srcdoc = paste(readLines(file), collapse = "\n"), 
-            width = WIDTH, height = HEIGHT)
+        list(srcdoc = paste(readLines(file), collapse = "\n")) 
     }
     else {
-        list(src = file, width = WIDTH, height = HEIGHT)
+        list(src = file)
     }
   
   x <- htmltools::tag("iframe", content)
