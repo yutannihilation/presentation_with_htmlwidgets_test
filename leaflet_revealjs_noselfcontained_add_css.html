@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Hiroaki Yutani" />
-  <meta name="dcterms.date" content="2015-10-12" />
+  <meta name="dcterms.date" content="2015-10-11" />
   <title>leaflet test</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="leaflet_revealjs_noselfcontained_add_css_files\revealjs_presentation/css/reveal.min.css"/>
+  <link rel="stylesheet" href="leaflet_revealjs_noselfcontained_add_css_files/revealjs_presentation/css/reveal.min.css"/>
 
 
 
-<link rel="stylesheet" href="leaflet_revealjs_noselfcontained_add_css_files\revealjs_presentation/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="leaflet_revealjs_noselfcontained_add_css_files/revealjs_presentation/css/theme/simple.css" id="theme">
 
 
   <!-- some tweaks to reveal css -->
@@ -28,7 +28,10 @@
       padding: 0px 0px;
     }
 
-
+     .reveal .title {
+        margin-top: 125px;
+        margin-bottom: 50px;
+     }
 
     .reveal table {
       border-width: 1px;
@@ -65,14 +68,14 @@
       var link = document.createElement( 'link' );
       link.rel = 'stylesheet';
       link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'leaflet_revealjs_noselfcontained_add_css_files\revealjs_presentation/css/print/pdf.css' : 'leaflet_revealjs_noselfcontained_add_css_files\revealjs_presentation/css/print/paper.css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'leaflet_revealjs_noselfcontained_add_css_files/revealjs_presentation/css/print/pdf.css' : 'leaflet_revealjs_noselfcontained_add_css_files/revealjs_presentation/css/print/paper.css';
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
     <!--[if lt IE 9]>
-    <script src="leaflet_revealjs_noselfcontained_add_css_files\revealjs_presentation/lib/js/html5shiv.js"></script>
+    <script src="leaflet_revealjs_noselfcontained_add_css_files/revealjs_presentation/lib/js/html5shiv.js"></script>
     <![endif]-->
 
-    <script src="leaflet_revealjs_noselfcontained_add_css_files/htmlwidgets-0.5.1/htmlwidgets.js"></script>
+    <script src="leaflet_revealjs_noselfcontained_add_css_files/htmlwidgets-0.5/htmlwidgets.js"></script>
     <script src="leaflet_revealjs_noselfcontained_add_css_files/jquery-1.11.1/jquery.min.js"></script>
     <link href="leaflet_revealjs_noselfcontained_add_css_files/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
     <script src="leaflet_revealjs_noselfcontained_add_css_files/leaflet-0.7.3/leaflet.js"></script>
@@ -86,7 +89,7 @@
 <section>
     <h1 class="title">leaflet test</h1>
     <h2 class="author">Hiroaki Yutani</h2>
-    <h3 class="date">2015-10-12</h3>
+    <h3 class="date">2015-10-11</h3>
 </section>
 
 <section id="test" class="slide level2">
@@ -97,14 +100,14 @@
     border: none !important;
     }
 </style>
-<p><div id="htmlwidget-5597" style="width:768px;height:576px;" class="leaflet"></div>
-<script type="application/json" data-for="htmlwidget-5597">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>"}]}]},"evals":[]}</script></p>
+<p><div id="htmlwidget-4487" style="width:768px;height:576px;" class="leaflet"></div>
+<script type="application/json" data-for="htmlwidget-4487">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>"}]}]},"evals":[]}</script></p>
 </section>
     </div>
   </div>
 
-  <script src="leaflet_revealjs_noselfcontained_add_css_files\revealjs_presentation/lib/js/head.min.js"></script>
-  <script src="leaflet_revealjs_noselfcontained_add_css_files\revealjs_presentation/js/reveal.min.js"></script>
+  <script src="leaflet_revealjs_noselfcontained_add_css_files/revealjs_presentation/lib/js/head.min.js"></script>
+  <script src="leaflet_revealjs_noselfcontained_add_css_files/revealjs_presentation/js/reveal.min.js"></script>
 
   <script>
 
@@ -114,7 +117,7 @@
         controls: true,
         progress: true,
         history: true,
-        center: true,
+        center: false,
         transition: 'default',
         backgroundTransition: 'default',
         
